@@ -278,6 +278,14 @@ function insertUserName() {
   blank_span.insertAdjacentHTML("afterend", "&nbsp;");
   // range.surroundContents(el);
 
+  insertHTMLNode(fragment)
+}
+
+/**
+ * 在光标处插入html节点
+ * @param {*} node 
+ */
+function insertHTMLNode(node) {
   // 如果有选中的内容，就替换掉
   var selection = window.getSelection();
   var range = selection.getRangeAt(0);
@@ -286,12 +294,11 @@ function insertUserName() {
   // 删除原有内容
   range.deleteContents();
 
-  range.insertNode(fragment);
+  range.insertNode(node);
 
   //  移动光标到下一个输入点
   selection.collapseToEnd();
 }
-
 
 function createAtSomeBody() {
   let button = document.createElement("button");
