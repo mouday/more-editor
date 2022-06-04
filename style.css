@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #338cf4;
+}
+
+.container {
+  /* 定位 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  background-color: #fff;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option__button {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  color: #020929;
+  cursor: pointer;
+}
+
+.option__button:hover,
+.option__button--active {
+  background-color: #e0e9ff;
+}
+
+.option__select {
+  padding: 7px;
+  border: 1px solid #020929;
+  border-radius: 3px;
+}
+
+.option__color__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.option__color__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 40px;
+  height: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+.option__color__input::-webkit-color-swatch {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+
+.option__color__input::-moz-color-swatch {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+
+.content {
+  margin-top: 10px;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  height: 50vh;
+}
+
+/* @功能的样式 */
+.user-link {
+  color: #096dd9;
+  cursor: pointer;
+}
+
+.user-link::before {
+  content: "@";
+}
+
+.user-link:hover {
+  background-color: #d1ecf9;
+}
